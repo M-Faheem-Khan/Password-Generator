@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>Password Generator</title>
+          <!-- Custom Stylesheet -->
+          <link rel="stylesheet" href="styles.css"/>
+     </head>
+     <body>
+          <!-- Heading -->
+          <h3>Password Generator</h3>
+          <!-- Container Start-->
+          <div class="container">
+               <input id="len" type="number" min="1" max="64" placeholder="Password Length" title="Password Length" required>
+               <br/>
+               <button type="button" onclick="generate_pass()" title="Generate Password">Generate Password</button>
+               <br/>
+          </div>
+          <!-- Container End -->
+          <!-- Password -->
+          <div id="code">
+               <span id="password"></span>
+          </div>
+          <!-- Exit button -->
+          <div class="right">
+               <span class="license">License: MIT</span>
+               <button type="button" onclick="exit_program()">Exit</button>
+          </div>
+
+     </body>
+
+     <script>
+     // this function generates a random string
+     function generate_pass(){
+          len = document.getElementById("len").value;
+          if (len <= 64 && len > 0){ // checking if the value of the length is lses than 64 and more than 0
+               var pass = ""; // storing password
+               var key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=:;/|"; // chars to use
+               for (var i = 0; i < len; i++)
+               pass += key.charAt(Math.floor(Math.random() * key.length)); // get char from
+               document.getElementById("password").value = pass; // setting the value for the password
+               document.getElementById("password").innerHTML = pass; // setting the innerHTML for password
+          } else { // if the user enters a incorrect length for the password
+               document.getElementById("password").innerHTML = "Enter a correct length for the Password"
+          }
+     }
+
+     // this function exits the program
+     function exit_program(){
+          const remote = require('electron').remote // electron
+          let win = remote.getCurrentWindow() // getting current window
+          win.close() // clsoing current window
+     }
+     </script>
+</html>

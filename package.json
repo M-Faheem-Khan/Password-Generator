@@ -1,0 +1,11 @@
+{
+  "name": "password_generator",
+  "version": "1.0.0",
+  "description": "A simple password generator between 0 and 64",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Muhammad Faheem Khan",
+  "license": "MIT"
+}

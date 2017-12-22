@@ -1,0 +1,84 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+*{
+     margin: 10px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'NaomisHand';
+  src:  url('Louis George Cafe.ttf');
+}
+
+body{
+     overflow: hidden;
+     padding: 10px;
+     color: rgb(247, 229, 46);
+     background: #2e3244;
+     font-family: 'NaomisHand';
+}
+
+div{
+     margin: 10px;
+}
+
+.container{
+     display: table;
+     margin: 0 auto;
+}
+
+.right{
+     float:right !important;
+}
+
+.license{
+     color: #efefef;
+     padding: 5px;
+     background: #373c52;
+}
+
+h3{
+     text-align: center;
+     margin: 10px;
+     font-size: 50px;
+}
+
+input{
+     margin: 10px;
+     height: 35px;
+     width: 150px;
+     padding: 7px;
+     color: rgb(247, 229, 46);
+     background: transparent;
+     border-top: 0px;
+     border-left: 0px;
+     border-right: 0px;
+     border-bottom: 1px solid rgb(247, 229, 46);
+}
+
+input:focus{
+     outline-width: 0px;
+}
+
+button{
+     height: 35px;
+     width: 150px;
+     background: transparent;
+     border: 1px solid rgb(247, 229, 46);
+     color: rgb(247, 229, 46);
+}
+
+button:hover{
+     cursor: pointer;
+}
+
+button:focus{
+     outline-width: 0px;
+}
+
+#code{
+     /* margin: 10%; */
+     text-align: center;
+     padding: 5px;
+}
